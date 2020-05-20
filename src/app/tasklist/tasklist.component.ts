@@ -24,10 +24,11 @@ export class TasklistComponent implements OnInit {
         .subscribe(tasklist => this.tasklist = tasklist);
   }
 
-  add(name: string): void {
+  add(name: string, time: number): void {
     name = name.trim();
-    if (!name) { return; }
-    this.taskService.addTask({ name } as Task)
+    time = time;
+    if (!name || isNaN(time)) { return; }
+    this.taskService.addTask({ name, time } as Task)
       .subscribe(task => {
         this.tasklist.push(task);
       });
