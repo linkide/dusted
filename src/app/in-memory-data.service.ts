@@ -13,7 +13,10 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 13, name: 'Keittiön siivous', time: 15},
       { id: 14, name: 'Imuronti', time:10},
     ];
-    return {tasklist};
+
+    const donelist = [
+    ];
+    return {tasklist, donelist};
   }
 
   // Overrides the genId method to ensure that a task always has an id.

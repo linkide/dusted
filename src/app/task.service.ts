@@ -39,6 +39,15 @@ getTasklist(): Observable<Task[]> {
     );
 }
 
+/** GET donelist from the server */
+getDonelist(): Observable<Task[]> {
+  return this.http.get<Task[]>(this.donelistUrl)
+    .pipe(
+      tap(_ => this.log('fetched donelist')),
+      catchError(this.handleError<Task[]>('getDonelist', []))
+    );
+}
+
   /** GET task by id. Will 404 if id not found */
   getTask(id: number): Observable<Task> {
     const url = `${this.tasklistUrl}/${id}`;
@@ -89,4 +98,5 @@ deleteTask(task: Task | number): Observable<Task> {
   }
 
   private tasklistUrl = 'api/tasklist';  // URL to web api
+  private donelistUrl = 'api/donelist';  // URL to web api
 }
