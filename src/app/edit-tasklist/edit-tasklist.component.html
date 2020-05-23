@@ -1,22 +1,27 @@
-<h3>Edit Tasklist</h3>
+<h3>Muokkaa tehtäviä</h3>
 <ul class="tasklist">
   <li *ngFor="let task of tasklist">
     <a routerLink="/detail/{{task.id}}">
-      <span class="badge">{{task.time}}</span> {{task.name}}
+    {{task.name}}
     </a>
     <button class="delete" title="delete task" (click)="delete(task)">x</button>
-  </li>
+  </li> 
 </ul>
+<br>
 
 <div>
-  <label>Task name:
-    <input #taskName />
-  </label><br>
-  <label>Task time:
-    <input #taskTime />
-  </label>
-  <!-- (click) passes input value to add() and then clears the input -->
-  <button (click)="add(taskName.value, taskTime.value); taskName.value=''; taskTime.value=''">
-    add
-  </button>
+<table>
+  <tr>
+    <th>Tehtävä</th>
+    <th>Aika</th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><label><input #taskName /></label></td>
+    <td><label><input #taskTime /></label></td>
+    <td><button (click)="add(taskName.value, taskTime.value); taskName.value=''; taskTime.value=''">
+      Lisää
+    </button></td>
+  </tr>
+</table>
 </div>
