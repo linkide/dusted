@@ -1,0 +1,20 @@
+<div *ngIf="task">
+
+  <h2>"{{task.name}}" -tehtävän muokkaus</h2>
+
+  <div *ngIf="task">
+    <table>
+      <tr>
+        <th>Tehtävä</th>
+        <th>Aika</th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tr>
+        <td><input [(ngModel)]="task.name" placeholder="name" /></td>
+        <td><input [(ngModel)]="task.time" placeholder="time" /></td>
+        <td><button (click)="goBack()">Takaisin</button></td>
+        <td><button (click)="save()">Tallenna</button></td>
+      </tr>
+    </table>
+  </div>

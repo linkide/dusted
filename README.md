@@ -1,2 +1,3 @@
 # dusted
-Housework calendar
+**Housework calendar**    
+Angular implementation
