@@ -1,12 +1,12 @@
 <h3>Muokkaa tehtäviä</h3>
-<ul class="tasklist">
-  <li *ngFor="let task of tasklist">
-    <a routerLink="/detail/{{task.id}}">
-    {{task.name}}
-    </a>
-    <button class="delete" title="delete task" (click)="delete(task)">x</button>
-  </li> 
-</ul>
+<div class="example-container">
+<div class="example-list">
+  <div class="example-box" *ngFor="let task of tasklist">
+    <a routerLink="/detail/{{task.id}}"><span></span>{{task.name}}</a><div class="timebadge">{{task.time}} min</div>
+    <!--<button class="delete" title="delete task" (click)="delete(task)">x</button>-->
+  </div> 
+</div>
+</div>
 <br>
 
 <div>
