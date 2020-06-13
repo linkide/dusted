@@ -1,24 +1,35 @@
-h2 {
-    font-size: 1.5em;
-    margin-bottom: 1em;
+h3 {
+  margin-bottom: 1em;
+  margin-left: 20px;
+  }
+
+  input {
+    border: solid 1px #ccc;
+    min-height: 25px;
+    min-width: 250px;
+    padding-left: 6px;
+    margin-right: 6px;
+  }
+  
+  table {
     margin-left: 20px;
-    padding-top: 0;
+  }
+  
+  th {
+    min-width: 70px;
+    text-align: center;
   }
   
   button {
-    background-color: #eee;
+    background-color: #ccc;
+    min-width: 124px;
+    padding: 7px;
+    margin: 3px;
+    border-radius: 2px;
     border: none;
-    padding: 5px 10px;
-    border-radius: 0px;
-    cursor: pointer;
-    cursor: hand;
-    font-family: Arial;
   }
   
-  button:hover {
-    background-color: #cfd8dc;
-  }
-
-  table {
-      margin-left: 20px;
+  button:hover{
+    background-color: #405061;
+    color: white;
   }
