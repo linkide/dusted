@@ -1,27 +1,32 @@
 <h3>Muokkaa tehtäviä</h3>
-<div class="example-container">
-<div class="example-list">
-  <div class="example-box" *ngFor="let task of tasklist">
-    <a routerLink="/detail/{{task.id}}"><span></span>{{task.name}}</a><div class="timebadge">{{task.time}} min</div>
-    <!--<button class="delete" title="delete task" (click)="delete(task)">x</button>-->
-  </div> 
-</div>
+<div class="tasklist-container">
+  <div class="tasklist-list">
+    <div class="task-box" *ngFor="let task of tasklist">
+      <a routerLink="/detail/{{task.id}}"><span></span>{{task.name}}</a>
+      <div class="timebadge">{{task.time}} min</div>
+      <!--<button class="delete" title="delete task" (click)="delete(task)">x</button>-->
+    </div>
+  </div>
 </div>
 <br>
 
+<h3>Lisää tehtävä</h3>
 <div>
-<table>
-  <tr>
-    <th>Tehtävä</th>
-    <th>Aika</th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><label><input #taskName /></label></td>
-    <td><label><input #taskTime /></label></td>
-    <td><button (click)="add(taskName.value, taskTime.value); taskName.value=''; taskTime.value=''">
-      Lisää
-    </button></td>
-  </tr>
-</table>
+  <table>
+    <tr>
+      <th>Tehtävä:</th>
+      <td><label><input #taskName /></label></td>
+    </tr>
+    <tr>
+      <th>Aika:</th>
+      <td><label><input #taskTime /></label> <b>min</b></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button (click)="add(taskName.value, taskTime.value); taskName.value=''; taskTime.value=''">
+          Lisää
+        </button></td>
+    </tr>
+
+  </table>
 </div>

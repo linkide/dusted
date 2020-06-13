@@ -5,32 +5,30 @@ h1 {
   margin-left: 20px;
   margin-top: 20px;
 }
-h2 {
-  font-size: 2em;
-  margin-bottom: 1em;
-  margin-left: 20px;
-  padding-top: 0;
+
+nav {
+margin-left: 20px;
 }
+
 nav a {
-  padding: 5px 10px;
+  border: solid 1px #ccc;
+  padding: 6px 10px;
   text-decoration: none;
   display: inline-block;
   background-color: #eee;
-  border-radius: 4px;
+  border-radius: 2px;
   margin-bottom: 1em;
-  margin-left: 20px;
 }
 nav a:visited, a:link {
-  color: #334953;
-}
-nav a:hover {
-  color: #039be5;
-  background-color: #cfd8dc;
-}
-nav a.active {
-  color: #039be5;
+  color: black;
 }
 
-p {
-  margin-bottom: 1.5em;
+nav a:hover {
+  color: black;
+  background-color: #ccc;
+}
+
+nav a.active {
+  color: black;
+  background-color: #ccc;
 }
